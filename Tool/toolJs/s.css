@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{background:#E6E6E6; margin:0; padding:0;}
+a{text-decoration:none;}
+ul{padding:0; margin:0;}
+li{ list-style:none;}
+
+
+.custom{width:560px;margin:0 auto;}
+.custom .c{float:left;}
+.custom .c #line{width:20px; height:350px;background:#eee;float:left;border:1px solid #CCC;border-right:none; overflow:hidden; }
+.custom .c #line b{font-size:10px; color:#555;height:18px;line-height:18px; width:20px; display:block; text-align:center; font-weight:100;}
+.custom .c .input{float:left;width:518px;height:350px; overflow:hidden;border:1px solid #CCC; border-left:none; }
+.custom .c .input textarea{width:518px;height:348px;float:left;font-size:12px;line-height:18px; border:none; background:#FFF; }
+.custom .b{padding-top:5px;width:540px;float:left;}
+.custom .b ul li{width:108px;height:30px;line-height:30px;float:left;}
+.custom .b ul li a{color:#333; width:97px;height:32px;line-height:32px; text-align:center;background:url(b.png) no-repeat; display:block; font-size:14px;}
