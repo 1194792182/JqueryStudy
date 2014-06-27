@@ -31,11 +31,28 @@ new Product("FL-DLH-02","Persian",12.00,"P",23.50,"Adult Female","EST-16"),
 new Product("FL-DLH-02","Persian",12.00,"P",89.50,"Adult Male","EST-17"),
 new Product("AV-CB-01","Amazon Parrot",92.00,"P",63.50,"Adult Male","EST-18")
 );
-$result=array();
+$rows=array();
 for($i=0;$i<count($productArray);$i++)
 {
-	array_push($result,$productArray[$i]);	
+	array_push($rows,$productArray[$i]);	
 }
-echo json_encode($result);
-?>
+$footer=array();
+array_push($footer,new Product("Average:","",19.80,"",60.40,"",""));
+array_push($footer,new Product("Total:","",198.0,"",604.0,"",""));
 
+
+class DataGridObj
+{
+	var $total;
+	var $rows;
+	var $footer;
+	function __construct($total,$rows,$footer)
+	{
+		$this->total=$total;
+		$this->rows=$rows;
+		$this->footer=$footer;
+	}
+}
+$dg=new DataGridObj(28,$rows,$footer);
+echo json_encode($dg);
+?>

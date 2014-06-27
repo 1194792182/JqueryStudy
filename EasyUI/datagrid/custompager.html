@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>custompager</title>
+<link type="text/css" rel="stylesheet" href="/ThemesDir/metro/easyui.css" />
+<link type="text/css" rel="stylesheet" href="/ThemesDir/icon.css" />
+<link type="text/css" rel="stylesheet" href="/ThemesDir/demo.css" />
+<script type="text/javascript" src="/ScriptDir/EasyUIJquery.js"></script>
+<script type="text/javascript" src="/ScriptDir/jEasyui.js"></script>
+<script type="text/javascript">
+		$(function(){
+			var pager = $('#dg').datagrid().datagrid('getPager');	// get the pager of datagrid
+			pager.pagination({
+				buttons:[{
+					iconCls:'icon-search',
+					handler:function(){
+						alert('search');
+					}
+				},{
+					iconCls:'icon-add',
+					handler:function(){
+						alert('add');
+					}
+				},{
+					iconCls:'icon-edit',
+					handler:function(){
+						alert('edit');
+					}
+				}]
+			});			
+		})
+	</script>
+</head>
+
+<body>
+
+<h2>Custom DataGrid Pager</h2>
+	<p>You can append some buttons to the standard datagrid pager bar.</p>
+	<div style="margin:20px 0;"></div>
+	<table id="dg" title="Custom DataGrid Pager" style="width:700px;height:250px"
+			data-options="rownumbers:true,singleSelect:true,pagination:true,url:'/Php/Product.php',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'itemid',width:80">Item ID</th>
+				<th data-options="field:'productid',width:100">Product</th>
+				<th data-options="field:'listprice',width:80,align:'right'">List Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right'">Unit Cost</th>
+				<th data-options="field:'attr1',width:240">Attribute</th>
+				<th data-options="field:'status',width:60,align:'center'">Status</th>
+			</tr>
+		</thead>
+	</table>
+	
+
+</body>
+</html>
