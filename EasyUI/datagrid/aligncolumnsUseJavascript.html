@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- InstanceBegin template="/Templates/EasyUI.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>aligncolumnsUseJavascript</title>
+<!-- InstanceEndEditable -->
+<link type="text/css" rel="stylesheet" href="/ThemesDir/metro/easyui.css" />
+<link type="text/css" rel="stylesheet" href="/ThemesDir/icon.css" />
+<link type="text/css" rel="stylesheet" href="/ThemesDir/demo.css" />
+<!-- InstanceBeginEditable name="style" -->
+<!-- InstanceEndEditable -->
+<script type="text/javascript" src="/ScriptDir/EasyUIJquery.js"></script>
+<script type="text/javascript" src="/ScriptDir/jEasyui.js"></script>
+<!-- InstanceBeginEditable name="script" -->
+<script type="text/javascript">
+$(function(){
+	$("dg").attr("style","width:700px;height:250px;");
+	$("dg").datagrid({
+		url:"/Php/Product.php",
+		singleSelect:'true',
+		collapsible:'true',
+		method:'get',
+		columns:[[
+			{ field:"itemid",title:"Item ID",width:80,halign:'center' },
+			{ field:"productid",title:"Product",width:100,halign:'center' },
+			{ field:"listprice",title:"List Price",width:80,align:'right',halign:'center' },
+			{ field:"unitcost",title:"Unit Cost",width:80,align:'right',halign:'center' },
+			{ field:"attr1",title:"Attribute",width:250,halign:'center' },
+			{ field:"status",title:"Status",width:60,halign:'center',align:'center' }
+		]]
+	});
+
+})
+</script>
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- InstanceBeginEditable name="body" --> 
+<!--<h2>Aligning Columns in DataGrid</h2>
+	<p>Use align and halign properties to set the alignment of the columns and their header.</p>
+	<div style="margin:20px 0;"></div>
+	
+	<table class="easyui-datagrid" title="Aligning Columns in DataGrid" style="width:700px;height:250px"
+			data-options="singleSelect:true,collapsible:true,url:'/Php/Product.php',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'itemid',width:80,halign:'center'">Item ID</th>
+				<th data-options="field:'productid',width:100,halign:'center'">Product</th>
+				<th data-options="field:'listprice',width:80,align:'right',halign:'center'">List Price</th>
+				<th data-options="field:'unitcost',width:80,align:'right',halign:'center'">Unit Cost</th>
+				<th data-options="field:'attr1',width:250,halign:'center'">Attribute</th>
+				<th data-options="field:'status',width:60,align:'center',halign:'center'">Status</th>
+			</tr>
+		</thead>
+	</table>-->
+<h2>Aligning Columns in DataGrid</h2>
+<p>Use align and halign properties to set the alignment of the columns and their header.</p>
+<div style="margin:20px 0;"></div>
+<dg>
+</dg>
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+</html>
